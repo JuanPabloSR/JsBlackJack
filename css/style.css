@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0px;
+  background-image: url(/assets/backgroundTexture.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.titleHeader {
+  font-family: "Patua One", cursive;
+  text-align: center;
+  background-color: #000000b7;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.cardPlayer {
+  position: relative;
+  width: 150px;
+  left: 100px;
+  margin-left: -75px;
+}
+
+#computer-cards,
+#player-cards {
+  height: 240px;
+}
+
+.btn {
+    font-weight: bold;
+    border-color: #200f0f65;
+    
+}
+.players {
+    font-family: 'Courgette', cursive;
+}
