@@ -43,3 +43,11 @@ const takeCard = () => {
 };
 
 // takeCard();
+const valueCard = (card) => {
+  const value = card.substring(0, card.length - 1);
+  return isNaN(value) ? (value === "A" ? 11 : 10) : value * 1;
+};
+
+const value = valueCard( takeCard() );
+console.log({value}); 
+console.log(value);
