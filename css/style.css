@@ -5,7 +5,6 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   color: #ffffff;
 }
 
@@ -21,20 +20,47 @@ body {
 .cardPlayer {
   position: relative;
   width: 150px;
-  left: 100px;
+  left: 50px;
   margin-left: -75px;
+  transform-origin: center;
+  transition: transform 0.3s, border 0.2s ease-in-out;
+  box-shadow: 0 0 0 0 transparent; /* shadow original */
+  animation: shine 0.5s ease-in-out infinite;
+  /* border: 2px solid #949494; */
+}
+.cardPlayer:hover {
+  transform: scale(1) translateY(-5px);
+  border: 2px solid #081953;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 5px #d6d6d6
 }
 
 #computer-cards,
 #player-cards {
   height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin-left: 500px; */
 }
 
+
+
 .btn {
-    font-weight: bold;
-    border-color: #200f0f65;
-    
+  font-weight: bold;
+  border-color: #200f0f65;
 }
 .players {
-    font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
+}
+
+
+
+/* MEDIA QUERYS */
+
+@media only screen and (max-width: 480px) {
+  .cardPlayer {
+    width: 120px; /* reduce el ancho de las cartas en dispositivos móviles */
+    height: 160px; /* reduce la altura de las cartas en dispositivos móviles */
+  }
 }

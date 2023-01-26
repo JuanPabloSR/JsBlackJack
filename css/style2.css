@@ -1,0 +1,89 @@
+/* General styles */
+html, body {
+    margin: 0;
+    background-image: url(/assets/backgroundTexture.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+  }
+  
+  /* Header styles */
+  .titleHeader {
+    font-family: "Patua One", cursive;
+    text-align: center;
+    background-color: #000000b7;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 25px;
+  }
+  
+  /* Button styles */
+  .btn {
+    font-weight: bold;
+    border-color: #200f0f65;
+  }
+  
+  /* Player text styles */
+  .players {
+    font-family: "Courgette", cursive;
+  }
+  
+  /* Card styles */
+  .cardPlayer {
+    position: relative;
+    width: 150px;
+    height: 240px;
+    margin: 0px auto;
+    transform-origin: center;
+    transition: transform 0.3s, border 0.2s ease-in-out;
+    box-shadow: 0 0 0 0 transparent; /* shadow original */
+    animation: shine 0.5s ease-in-out infinite;
+    /* border: 2px solid #949494; */
+  }
+  
+  .cardPlayer:hover {
+    transform: scale(1.1) translateY(-5px);
+    border: 2px solid #081953;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px #d6d6d6
+  }
+  
+  /* Container styles */
+  #computer-cards,
+  #player-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px auto;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 480px) {
+    .cardPlayer {
+      width: 120px; /* reduce el ancho de las cartas en dispositivos móviles */
+      height: 160px; /* reduce la altura de las cartas en dispositivos móviles */
+    }
+  }
+  
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    .cardPlayer {
+      width: 150px; /* width
+      height: 200px; / reduce height for small tablets */
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+.cardPlayer {
+width: 200px; /* increase width for tablets /
+height: 300px; / increase height for tablets */
+}
+}
+
+@media only screen and (min-width: 1024px) {
+.cardPlayer {
+width: 250px; /* increase width for desktops /
+height: 350px; / increase height for desktops */
+}
+}
